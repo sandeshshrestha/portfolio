@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{208:function(e,t,a){"use strict";a.r(t);var n=a(0),l=a.n(n),o=a(130),r=a(205),c=a(204);t.default=function(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{title:"Home"}),l.a.createElement("h1",null,"Sandesh Shrestha"),l.a.createElement(o.a,{to:"/blog"},"Blog"))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-f6e08c57b8f622c39061.js.map
