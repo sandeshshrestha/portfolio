@@ -5,4 +5,5 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
   background: url('../images/wallpaper.png') no-repeat center center;
+  transition: background-color .3s linear;
 }
