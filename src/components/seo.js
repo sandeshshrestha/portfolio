@@ -25,14 +25,21 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-
+  const metaDescription = description || site.siteMetadata.description;
+  
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
+      link={[
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'
+        }
+      ]}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
