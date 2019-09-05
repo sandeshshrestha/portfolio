@@ -1,0 +1,14 @@
+$bold-font-weight: 300;
+$regular-font-weight: 300;
+$main-font-family: 'Roboto', sans-serif;
+
+$text-color: #000;
+$link-color: #3991fb;
+
+@function tint($color, $percent) {
+	@return mix($color, #fff, $percent);
+}
+
+@function shadow($color, $percent) {
+	@return mix($color, #000, $percent);
+}

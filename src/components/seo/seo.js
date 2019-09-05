@@ -42,7 +42,7 @@ function SEO({ description, lang, meta, title }) {
         {
           rel: 'stylesheet',
           type: 'text/css',
-          href: 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap'
+          href: 'https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap'
         }
       ]}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
