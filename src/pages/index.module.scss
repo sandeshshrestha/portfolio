@@ -3,27 +3,15 @@
     text-align: center;
     color: #fff;
 }
-
-.nameSection {
-
-    h1 {
-        margin: 14px 0 0 0;
-    }
-    .title {
-        font-size: 14px;
-        margin: 0 0 22px 0;
-    }
-    .link {
-        color: #fff;
-        text-decoration: none;
-        display: inline-block;
-        padding: 5px 10px;
-        margin: 0 10px;
-        border: 1px solid #fff;
-        border-radius: 15px;
-    }
+.bannerLink {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border: 1px solid #fff;
+    border-radius: 15px;
 }
-
 .section {
     padding: 0 20px;
     h2 {
@@ -37,10 +25,4 @@
             content: ', ';
         }
     }
-}
-
-.divider {
-    height: 1px;
-    background-color: #507394;
-    margin: 60px 0;
 }

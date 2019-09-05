@@ -2,7 +2,8 @@ import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import SEO from "../components/seo"
-import SLogo from "../components/SLogo"
+import Divider from "../components/Divider"
+import Banner from "../components/Banner"
 import s from "./index.module.scss";
 
 const sections = [
@@ -29,18 +30,13 @@ const sections = [
 const IndexPage = () => (
   <main className={s.root}>
     <SEO title="Home" />
-    <SLogo />
-    <section className={s.nameSection}>
-      <h1>Sandesh Shrestha</h1>
-      <p className={s.title}>Full Stack Developer</p>
-      <div className={s.linksContainer}>
-        <Link to="/blog" className={s.link}>Blog</Link>
-        <a href="https://github.com/sandeshshrestha" target="_blank" rel="noopener noreferrer" className={s.link}>Github</a>
-      </div>
-    </section>
+    <Banner title="Sandesh Shrestha" subtitle="Full Stack Developer">
+      <Link to="/blog" className={s.bannerLink}>Blog</Link>
+      <a href="https://github.com/sandeshshrestha" target="_blank" rel="noopener noreferrer" className={s.bannerLink}>Github</a>
+    </Banner>
     {sections.map(({ title, items }) => (
       <Fragment key={title}>
-        <div className={s.divider} />
+        <Divider />
         <section className={s.section}>
           <h2>{title}</h2>
           <div className={s.sectionItems}>
