@@ -38,6 +38,11 @@ function SEO({ description, lang, meta, title }) {
           rel: 'stylesheet',
           type: 'text/css',
           href: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'
+        },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap'
         }
       ]}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
