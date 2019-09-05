@@ -11,12 +11,17 @@ const IndexPage = () => (
     <SLogo />
     <section className={s.nameSection}>
       <h1>Sandesh Shrestha</h1>
-      <div className={s.title}>Full Stack Developer</div>
+      <p className={s.title}>Full Stack Developer</p>
       <div className={s.linksContainer}>
         <Link to="/blog" className={s.link}>Blog</Link>
         <a href="https://github.com/sandeshshrestha" target="_blank" rel="noopener noreferrer" className={s.link}>Github</a>
       </div>
     </section>
+    <div className={s.divider} />
+    <section className={s.frontendSection}>
+      <h2>Frontend Stack</h2>
+    </section>
+    <div className={s.divider} />
   </main>
 )
 
