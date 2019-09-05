@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{205:function(e,a,n){"use strict";n.r(a);var t=n(0),c=n.n(t),r=n(201),l=n(208),o=n.n(l),m=function(e){var a=e.children;return c.a.createElement("main",{className:o.a.root},a)},s=n(202),i=n(209),u=n.n(i);a.default=function(){return c.a.createElement(m,null,c.a.createElement(s.a,{title:"Home"}),c.a.createElement(r.a,{to:"/"},"Home"),c.a.createElement("section",{className:u.a.nameSection},c.a.createElement("h1",null,"Sandesh Shrestha")))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-761136162534bc2469b0.js.map
