@@ -1,9 +1,30 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 import SLogo from "../components/SLogo"
 import s from "./index.module.scss";
+
+const sections = [
+  {
+    title: 'Frontend Stack',
+    items: [
+      'HTML', 'CSS', 'JavaScript', 'React', 'Gatsby', 'Next.js',
+    ]
+  },
+  {
+    title: 'Backend Stack',
+    items: [
+      'Hapi.js', 'Laravel', '.NETCore', 'GraphQL'
+    ]
+  },
+  {
+    title: 'Other',
+    items: [
+      'Docker', 'Kubernetes', 'Terraform'
+    ]
+  }
+];
 
 const IndexPage = () => (
   <main className={s.root}>
@@ -17,11 +38,19 @@ const IndexPage = () => (
         <a href="https://github.com/sandeshshrestha" target="_blank" rel="noopener noreferrer" className={s.link}>Github</a>
       </div>
     </section>
-    <div className={s.divider} />
-    <section className={s.frontendSection}>
-      <h2>Frontend Stack</h2>
-    </section>
-    <div className={s.divider} />
+    {sections.map(({ title, items }) => (
+      <Fragment key={title}>
+        <div className={s.divider} />
+        <section className={s.section}>
+          <h2>{title}</h2>
+          <div className={s.sectionItems}>
+            {items.map(item => (
+              <span key={item} className={s.sectionItem}>{item}</span>
+            ))}...
+          </div>
+        </section>
+      </Fragment>
+    ))}
   </main>
 )
 
