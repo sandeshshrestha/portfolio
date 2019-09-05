@@ -4,8 +4,15 @@
 
 .nameSection {
     h1 {
+        margin: .3em 0 0 0;
         text-align: center;
         color: #fff;
+    }
+    .title {
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 1em;
     }
     .linksContainer {
         text-align: center;
