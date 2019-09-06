@@ -27,8 +27,13 @@ const sections = [
   }
 ];
 
+const a = () => {
+  const b = '';
+  b();
+};
+
 const IndexPage = () => (
-  <main className={s.root}>
+  <main className={s.root} onClick={a}>
     <SEO title="Home" />
     <Banner title="Sandesh Shrestha" subtitle="Full Stack Developer">
       <Link to="/blog" className={s.bannerLink}>Blog</Link>

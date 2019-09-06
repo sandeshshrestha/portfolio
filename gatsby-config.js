@@ -42,8 +42,13 @@ module.exports = {
         postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-sentry",
+      options: {
+        dsn: "https://27b2005f7e524402b53a58634551cea8@sentry.io/1546001L",
+        enabled: true
+      }
+    },
+    `gatsby-plugin-offline`,
   ],
 }
