@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h1>Whatever</h1>","frontmatter":{"date":"May 06, 2019","path":"/blog/my-second-post","title":"My second blog post"}}},{"node":{"html":"<h1>Whatever</h1>","frontmatter":{"date":"May 04, 2019","path":"/blog/my-first-post","title":"My first blog post"}}}]}}}
+{"data":{"allMarkdownRemark":{"edges":[{"node":{"html":"<h2>Whatever</h2>","frontmatter":{"date":"May 04, 2019","path":"/blog/my-first-post","title":"My first blog post"}}}]}}}
