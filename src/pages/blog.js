@@ -33,7 +33,7 @@ export default () => {
   return (
     <main className={s.root}>
       <SEO title="Blog" />
-      <Banner title="Blog" subtitle="Something for me to remember" />
+      <Banner title="Blog" subtitle="My blog posts" />
       {edges.map(({ node: { frontmatter: { title, path, date}, html }}) => (
         <Fragment key={path}>
           <Divider />
