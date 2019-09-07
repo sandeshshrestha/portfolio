@@ -5,7 +5,7 @@ import s from "./blogTeaser.module.scss"
 
 const BlogTeaser = ({ title, path, date, body }) => (
   <Link to={path} className={s.root}>
-    <h2 className={s.title}>{title}</h2>
+    <h2>{title}</h2>
     <div className={s.date}>{date}</div>
   </Link>
 )
