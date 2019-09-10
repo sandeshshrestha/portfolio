@@ -4,6 +4,36 @@ $main-font-family: 'Roboto', sans-serif;
 
 $text-color: #000;
 $link-color: #3991fb;
+$screen-xs-min: 320px;  /* Extra small screen / phone */
+$screen-xs-ls-min: 568px;  /* Extra small landscape screen / phone */
+$screen-sm-min: 768px;  /* Small screen / tablet */
+$screen-md-min: 1024px;  /* Medium screen / desktop */
+$screen-lg-min: 1440px; /* Large screen / wide desktop */
+
+$screen-xs-max: $screen-xs-ls-min - 1;
+$screen-xs-ls-max: $screen-sm-min - 1;
+$screen-sm-max: $screen-md-min - 1;
+$screen-md-max: $screen-lg-min - 1;
+$screen-lg-max: 99999px;
+
+$size-xs: '(min-width: 0)';
+$size-xs-ls: '(min-width: #{$screen-xs-ls-min})';
+$size-sm: '(min-width: #{$screen-sm-min})';
+$size-md: '(min-width: #{$screen-md-min})';
+$size-lg: '(min-width: #{$screen-lg-min})';
+
+$size-xs-and-below: '(max-width: #{$screen-xs-max})';
+$size-xs-ls-and-below: '(max-width: #{$screen-xs-ls-max})';
+$size-sm-and-below: '(max-width: #{$screen-sm-max})';
+$size-md-and-below: '(max-width: #{$screen-md-max})';
+$size-lg-and-below: '(max-width: #{$screen-lg-max})';
+
+$size-only-xs: $size-xs-and-below;
+$size-only-xs-ls: '(min-width: #{$screen-xs-ls-min}) and #{$size-xs-ls-and-below}';
+$size-only-sm: '(min-width: #{$screen-sm-min}) and #{$size-sm-and-below}';
+$size-only-md: '(min-width: #{$screen-md-min}) and #{$size-md-and-below}';
+$size-only-lg: '(min-width: #{$screen-lg-min}) and #{$size-lg-and-below}';
+
 
 @function tint($color, $percent) {
 	@return mix($color, #fff, $percent);

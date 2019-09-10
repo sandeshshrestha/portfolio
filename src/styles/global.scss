@@ -1,5 +1,8 @@
 @import "./variables.scss";
 
+html {
+    font-size: 16px;
+}
 body {
     background: #0F2027;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
@@ -11,4 +14,19 @@ body {
 
 h1, h2 {
     font-weight: $bold-font-weight;
+}
+
+@media #{$size-sm} {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media #{$size-md} {
+    html {
+        font-size: 24px;
+    }
+    h1, h2 {
+        font-weight: 100;
+    }
 }
