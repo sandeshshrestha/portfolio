@@ -1,30 +1,68 @@
 @import "../../styles/variables.scss";
 
-$height: 10px;
-$width: 10px;
-$initialTop: 20px;
+$height-xs: 10px;
+$height-sm: 15px;
+$height-md: 20px;
+$initialTop-xs: $height-xs * 2;
+$initialTop-sm: $height-sm  * 2;
+$initialTop-md: $height-md * 2;
 $color: #09203f;
 $color1: tint($color, 90);
 $color2: tint($color, 80);
+$transform1: rotate(-45deg) skew(15deg, 15deg);
+$transform2: rotate(-45deg) skew(-45deg, 15deg);
+$transform3: rotate(-15deg) skew(-15deg, -15deg);
+
+$keys: (
+    xs: (
+        height: $height-xs,
+        media: $size-xs-ls-and-below,
+        logoContainerWidth: 50px,
+        logoContainerHeight: 32px,
+        squareFourLeft: 25px,
+        squareFourKeyFramesHeight100: 7px,
+        squareFourKeyFramesTop100: 23px,
+        squareFiveKeyFramesTop100: 5px,
+        squareFiveKeyFramesLeft100: 16px
+    ),
+    sm: (
+        height: $height-sm,
+        media: $size-only-sm,
+        logoContainerWidth: 54px,
+        logoContainerHeight: 46px,
+        squareFourLeft: 27px,
+        squareFourKeyFramesHeight100: 11px,
+        squareFourKeyFramesTop100: 34px,
+        squareFiveKeyFramesTop100: 7px,
+        squareFiveKeyFramesLeft100: 14px
+    ),
+    md: (
+        height: $height-md,
+        media: $size-md,
+        logoContainerWidth: 60px,
+        logoContainerHeight: 60px,
+        squareFourLeft: 30px,
+        squareFourKeyFramesHeight100: 14px,
+        squareFourKeyFramesTop100: 46px,
+        squareFiveKeyFramesTop100: 10px,
+        squareFiveKeyFramesLeft100: 12px
+    )
+);
 
 .logoContainer {
-    width: 50px;
-    height: 35px;
     margin: 0 auto;
     position: relative;
 }
 
 .square {
     position: absolute;
-    width: $width;
-    height: $height;
     left: 20px;
 }
 
 .side,
 .side2,
 .faceTop {
-    transform: rotate(-45deg) skew(15deg, 15deg);
+    transform: $transform1;
 }
 
 .side {
@@ -38,27 +76,19 @@ $color2: tint($color, 80);
 .squareOne {
     background: $color1;
     z-index: 5;
-    top: $initialTop;
-    animation: squareOneKeyFrames 1s 0.5s 1 forwards;
 }
 
 .squareTwo {
     background: $color2;
-    top: $initialTop;
     z-index: 4;
-    animation: squareTwoKeyFrames 0.8s 0.5s 1 forwards;
 }
 
 .squareThree {
     background: $color1;
-    top: 20px;
 }
 
 .squareFour {
     background: $color1;
-    top: $initialTop;
-    left: 25px;
-    animation: squareFourKeyFrames 0.6s 0.6s 1 forwards ease-in-out;
 }
 
 .squareFive {
@@ -66,59 +96,93 @@ $color2: tint($color, 80);
     top: 5px;
     left: 16px;
     opacity: 0;
-    animation: squareFiveKeyFrames 0.6s 1.1s 1 forwards ease-in-out;
 }
 
-@keyframes squareOneKeyFrames {
-    0% {
-        top: $initialTop;
+@each $key, $map in $keys {
+    $height: map-get($map, 'height');
+
+    @media #{map-get($map, 'media')} {
+        .logoContainer {
+            width: map-get($map, 'logoContainerWidth');
+            height: map-get($map, 'logoContainerHeight');
+        }
+        
+        .square {
+            width: $height;
+            height: $height;
+        }
+        
+        .squareOne {
+            top: $height * 2;
+            animation: squareOneKeyFrames-#{$key} 1s 0.5s 1 forwards;
+        }
+        
+        .squareTwo {
+            top: $height * 2;
+            animation: squareTwoKeyFrames-#{$key} 0.8s 0.5s 1 forwards;
+        }
+        
+        .squareThree {
+            top: $height * 2;
+        }
+        
+        .squareFour {
+            top: $height * 2;
+            left: map-get($map, 'squareFourLeft');
+            animation: squareFourKeyFrames-#{$key} 0.6s 0.6s 1 forwards ease-in-out;
+        }
+        
+        .squareFive {
+            animation: squareFiveKeyFrames-#{$key} 0.6s 1.1s 1 forwards ease-in-out;
+        }
+    }
+    @keyframes squareOneKeyFrames-#{$key} {
+        0% {
+            top: $height * 2;
+        }
+
+        100% {
+            top: 0px;
+        }
     }
 
-    100% {
-        top: 0px;
-    }
-}
+    @keyframes squareTwoKeyFrames-#{$key} {
+        0% {
+            top: $height * 2;
+        }
 
-@keyframes squareTwoKeyFrames {
-    0% {
-        top: $initialTop;
-    }
-
-    100% {
-        top: 10px;
-    }
-}
-
-@keyframes squareFourKeyFrames {
-    0% {
-        -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
-        transform: rotate(-45deg) skew(15deg, 15deg);
+        100% {
+            top: $height;
+        }
     }
 
-    100% {
-        -webkit-transform: rotate(-45deg) skew(-45deg, 15deg);
-        transform: rotate(-45deg) skew(-45deg, 15deg);
-        height: 7px;
-        top: 23px;
-    }
-}
+    @keyframes squareFourKeyFrames-#{$key} {
+        0% {
+            transform: $transform1;
+        }
 
-@keyframes squareFiveKeyFrames {
-    0% {
-        -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
-        transform: rotate(-45deg) skew(15deg, 15deg);
-        opacity: 0;
+        100% {
+            transform: $transform2;
+            height: map-get($map, 'squareFourKeyFramesHeight100');
+            top: map-get($map, 'squareFourKeyFramesTop100');
+        }
     }
 
-    98% {
-        opacity: 1;
-    }
+    @keyframes squareFiveKeyFrames-#{$key} {
+        0% {
+            transform: $transform1;
+            opacity: 0;
+        }
 
-    100% {
-        top: 5px;
-        left: 16px;
-        -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
-        transform: rotate(-15deg) skew(-15deg, -15deg);
-        opacity: 1;
+        98% {
+            opacity: 1;
+        }
+
+        100% {
+            top: map-get($map, 'squareFiveKeyFramesTop100');
+            left: map-get($map, 'squareFiveKeyFramesLeft100');
+            transform: $transform3;
+            opacity: 1;
+        }
     }
 }
