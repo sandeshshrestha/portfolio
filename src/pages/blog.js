@@ -7,7 +7,7 @@ import BlogTeaser from '../components/BlogTeaser';
 import Banner from "../components/Banner"
 import s from "./blog.module.scss";
 
-export default () => {
+const BlogPage = () => {
   const { allMarkdownRemark: { edges }} = useStaticQuery(
     graphql`
       query {
@@ -42,4 +42,6 @@ export default () => {
       ))}
     </main>
   )
-}
+};
+
+export default BlogPage;
