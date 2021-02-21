@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.root {
+}
+.content {
+  padding: 30px;
+}
+
+@media #{$size-xs-ls} {
+  .root {
+  }
+}
+
+@media #{$size-sm} {
+  .root {
+  }
+}
+@media #{$size-md} {
+  .root {
+  }
+}

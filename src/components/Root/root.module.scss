@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.root {
+  margin: 10px;
+}
+
+@media #{$size-xs-ls} {
+  .root {
+  }
+}
+
+@media #{$size-sm} {
+  .root {
+  }
+}
+@media #{$size-md} {
+  .root {
+  }
+}

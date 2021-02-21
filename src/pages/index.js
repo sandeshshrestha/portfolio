@@ -1,18 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import SEO from "../components/seo"
-import Banner from "../components/Banner"
+import PictureBanner from "../sections/PictureBanner"
+import AboutMe from "../sections/AboutMe"
+import Section from "../components/Section"
+import Root from "../components/Root"
 import s from "./index.module.scss";
+import Languages from "../sections/Languages"
+import ToolsIUse from "../sections/ToolsIUse"
+import Knowledge from "../sections/Knowledge"
+import Projects from "../sections/Projects"
+import Blog from "../sections/Blog"
+import Frameworks from "../sections/Frameworks"
 
 const IndexPage = () => (
-  <main className={s.root}>
+  <Root>
     <SEO title="Home" />
-    <Banner title="Sandesh Shrestha" subtitle="Full Stack Developer">
-      <Link to="/blog" className={s.bannerLink}>Blog</Link>
-      <a href="https://github.com/sandeshshrestha" target="_blank" rel="noopener noreferrer" className={s.bannerLink}>Github</a>
-    </Banner>
-  </main>
+    <PictureBanner />
+    <AboutMe />
+    <Languages />
+    <Frameworks />
+    <ToolsIUse />
+    <Knowledge />
+    <Projects />
+    <Blog />
+  </Root>
 )
 
 export default IndexPage

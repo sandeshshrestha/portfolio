@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.root {
+}
+
+
+.blogItem {
+  padding-bottom: 60%;
+  background-size: cover;
+  position: relative;
+  border-bottom: 1px solid #a0a0a0;
+  display: block;
+}
+
+.blogTitle {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 10%;
+  color: white;
+  font-size: 24px;
+  text-shadow:
+   -1px -1px 0 #a0a0a0,
+    1px -1px 0 #a0a0a0,
+    -1px 1px 0 #a0a0a0,
+     1px 1px 0 #a0a0a0;
+}
+
+@media #{$size-xs-ls} {
+  .root {
+  }
+}
+
+@media #{$size-sm} {
+  .root {
+  }
+}
+@media #{$size-md} {
+  .root {
+  }
+}
