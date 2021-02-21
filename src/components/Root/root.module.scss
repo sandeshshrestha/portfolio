@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.root {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media #{$size-xs-ls} {
+  .root {
+  }
+}
+
+@media #{$size-sm} {
+  .root {
+  }
+}
+@media #{$size-md} {
+  .root {
+  }
+}

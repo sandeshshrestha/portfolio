@@ -1,45 +1,7 @@
 @import "../styles/variables.scss";
 
-.root {
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    right: 40px;
-    margin-top: -143px - 40px;
-}
-.bannerLink {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 5px 10px;
-    margin: 0 10px;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    margin-bottom: 16px;
-    line-height: 40px;
-    min-width: 150px;
-    font-size: 16px;
-}
-
-@media #{$size-xs-ls} {
-    .root {
-        margin-top: -100px;
-    }
-    .bannerLink {
-        display: inline-block;
-        line-height: 30px;
-    }
-}
-
-@media #{$size-sm} {
-    .root {
-        margin-top: -105px;
-    }
-}
-@media #{$size-md} {
-    .root {
-        margin-top: -110px - 40px;
-    }
+.pictureBanner {
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.3);
+  box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.3);
 }

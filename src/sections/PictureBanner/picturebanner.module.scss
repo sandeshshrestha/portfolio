@@ -1,0 +1,77 @@
+@import "../../styles/variables.scss";
+
+.root {
+  padding-bottom: 30px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.image {
+  background-image: url('https://bslthemes.com/ryan/demo/images/man5_big.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: -200px;
+    height: 200px;
+    background: #ffffff;
+  }
+
+  &:before {
+    transform: rotate(-12deg);
+  }
+
+  &:after {
+    transform: rotate(12deg);
+  }
+}
+
+.name {
+  text-align: center;
+  font-weight: $bold-font-weight;
+  margin-top: 24px;
+  margin-bottom: 9px;
+  font-family: 'Lobster';
+}
+
+.position {
+  text-align: center;
+  margin: 15px 0 0 0;
+  color: $background-gradient-end;
+  font-weight: 400;
+
+  a {
+    color: $background-gradient-end;
+  }
+}
+
+.links {
+  text-align: center;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.link {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+
+  a {
+    color: $link-color;
+  }
+}

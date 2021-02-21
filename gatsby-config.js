@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `SandeshShrestha.Com`,
-    description: `My portfolio`,
-    author: `@gatsbyjs`,
+    title: `Sandesh Shrestha`,
+    description: `Portfolio of Sandesh Shrestha`,
+    author: `@sandeshsth`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,8 +13,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,14 +25,6 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-blog-posts`,
-        path: `${__dirname}/src/markdown-blog-posts`,
-      },
-    },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-postcss`,
@@ -46,7 +36,7 @@ module.exports = {
       resolve: "gatsby-plugin-sentry",
       options: {
         dsn: "https://27b2005f7e524402b53a58634551cea8@sentry.io/1546001",
-        enabled: true
+        enabled: false
       }
     },
     `gatsby-plugin-offline`,
